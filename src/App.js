@@ -66,8 +66,12 @@ export default function Home() {
   }
 
   function gameOver() {
+    alert('Game Over! Press OK to restart.');
+
     setSnake(snakeInitialPosition);
     setScore(0);
+    renderFood();
+
   }
 
   function updateGame() {
@@ -99,7 +103,7 @@ export default function Home() {
     }
 
     if (newSnake[0].x === food.x && newSnake[0].y === food.y) {
-      setScore((sco) => sco + 1);
+      setScore((scor) => scor + 1);
       renderFood();
     } else {
       newSnake.pop();
@@ -128,7 +132,9 @@ export default function Home() {
   }
 
   useEffect(() => {
-    let moveSnake = setInterval(updateGame, speed);
+    const moveSnake = setInterval(() => {
+      updateGame();
+    }, speed);
     return () => clearInterval(moveSnake);
   }, [snake, direction, food]);
 
@@ -150,14 +156,14 @@ export default function Home() {
         <div className="setting">
           <div class="dropdown-center">
             <button className="btn btn-secondary btn-outline-warning btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Difficulty 
+              Difficulty
             </button>
             <ul className="dropdown-menu dropdown-menu-right dropdown-width">
               <li><a className="dropdown-item" onClick={() => setSpeed(180)}>Easy</a></li>
               <li><a className="dropdown-item" onClick={() => setSpeed(120)}>Medium</a></li>
               <li><a className="dropdown-item" onClick={() => setSpeed(70)}>Hard</a></li>
             </ul>
-            
+
           </div>
         </div>
       </div>
