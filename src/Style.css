@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.snakeGame {
+    background-image: url(./img/GAMER-WALLPAPER-HD.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+}
+
+.column1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 74%;
+}
+
+.column2 {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-right: 150px;
+}
+
+.score {
+    font-size: 57px;
+    font-weight: bold;
+    color: gold;
+    font-family: cursive;
+    margin-bottom: 171px;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(20, 30px);
+    grid-template-rows: repeat(20, 30px);
+    width: max-content;
+    border: 5px solid black;
+    border-radius: 7px;
+    background: linear-gradient(#39126b, #c554bd, #39126b);
+}
+
+.setting {
+    margin-bottom: 146px;
+}
+
+.cell {
+    width: 30px;
+    height: 30px;
+
+}
+
+.food {
+    background-color: red;
+    border: 2px solid #831111;
+    border-radius: 27px;
+}
+
+.snake {
+    background-color: rgba(11, 56, 11, 0.872);
+    border-radius: 2px;
+
+}
+
+.snake-head {
+    background-color: black;
+    border-radius: 5px;
+}
+
+.btn {
+    border: 2px solid gold;
+    color: gold;
+    background: transparent;
+}
+
+.dropdown-item{
+    background: transparent ;
+}
+
+.dropdown-width {
+    min-width: 100%;
+}
