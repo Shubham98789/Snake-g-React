@@ -1,4 +1,4 @@
-React Snake Game
+#React Snake Game
 🐍 A classic Snake Game implemented using React!
 
 Tech Stack
